@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <title>Leaflet Map</title>
+
+    <style type="text/css">
+       
+        .align{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;   
+            font-family: 'Oswald', sans-serif;
+            background : url(/static/img/theme2.jpeg);
+            section{
+              width: 90%;
+              max-width: 1200px;
+              margin: 0 auto;
+              .row{
+                align-items: center;
+                height: 100vh;
+              }
+            }
+        }
+
+        .aligns{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;   
+          font-family: 'Oswald', sans-serif;
+          section{
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            .row{
+              align-items: center;
+              height: 100vh;
+            }
+          }
+      }
+
+        .logo{
+            font-size: 3em;
+            letter-spacing: 2px; 
+            color: #094E2D;
+            font-weight: bold;
+            ali
+        }
+      
+        .image {
+          border-radius: 50%;
+          opacity : 1;
+        }
+      
+        
+          .submit a{
+            text-decoration: none;
+            background: #1CAF5A;
+            color: white;
+            padding: 10px 18px;
+            font-size: 20px;
+            border: #0B796B;
+            border-radius: 8px;
+            letter-spacing: 1px;
+            transition: 0.4s;
+        }
+        .submit a:hover {
+            background: transparent;
+            border: 1px solid #1CAF5A;
+            color: black;
+          }
+
+          .cards-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            align-content: center;
+          }
+          
+          .card {
+            width: 250px;
+            height: 200px;
+            background-color:  #71B295;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+          }
+            
+      
+          
+    </style>
+</head>
+
+<body>
+    <hr style="width:100%; height:2px; text-align: ; background-color:none">
+
+<div class="align">
+    <div class="row justify-content-center">
+      <div class="logo">
+        <div class="image">
+          <a href="{{url_for('index_page')}}"><img src="/static/img/digihand.jpg" alt="teehee"style="width:60px; height:65px; border-radius:50%; "></a>KHETI
+        </div>
+      </div>
+    </div>
+</div>
+
+    
+    <hr style="width:70%; height:0px ; background-color:#094E2D">
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script>
+    document.addEventListener('DOMContentLoaded', function () {
+            // Initialize Leaflet map
+            var map = L.map('map').setView([27.9928478, 84.5296624], 7.5);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 
+            {attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map)
+
+            // Initialize form elements
+             var latitudeInput = document.getElementById('latitude');
+             var longitudeInput = document.getElementById('longitude');
+             var locationForm = document.getElementById('locationForm');
+
+            // Handle map click event
+            map.on('click', function (e) {
+            var lat = e.latlng.lat.toFixed(6);
+            var lng = e.latlng.lng.toFixed(6);
+
+            latitudeInput.value = lat;
+            longitudeInput.value = lng;
+            });
+
+            // Handle form submit event
+            locationForm.addEventListener('submit', function (e) 
+
+            {e.preventDefault();
+            alert('Form submitted!\nLatitude: ' + latitudeInput.value + '\nLongitude: ' + longitudeInput.value);
+            locationForm.submit();
+            });
+    });
+
+   </script>
+
+    <div class="row justify-content-center">
+        <div class="col-sm-8">
+            <div id="map" style="height: 550px;"></div>
+                <div class=" row justify-content-center">
+                    <div class="col-sm-6 mt-4">
+
+                        <hr style="width:100%; height:0px; text-align: ; background-color:#094E2D">
+                        <div class="align">
+                        <div class="container">
+                          <div class="card">
+                        <form action="/analysis" method="POST">
+
+                            <div class="form-group">
+                              <label for="latitude">Latitude:</label>
+                              <input type="text" name="latitude" id="latitude" required>
+                            </div>
+                          </br>
+                        </br>
+                      </br>
+                    </br>
+                            <div class="form-group">
+                              <label for="longitude">Longitude:</label>
+                              <input type="text" name="longitude" id="longitude" required>
+                            </div>
+                          </br>
+                        </br>
+                      </br>
+                    </br>
+                            
+                             <button type="submit" >Analyze</button></a>
+                                 
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+  </div>    
+</div>
+
+    <script>
+        function submitForm() {
+          var latitude = document.getElementById('latitude').value;
+          var longitude = document.getElementById('longitude').value;
+          var apiToken = document.getElementById('apiToken').value;
+    
+          // Create a data object to send to the NARC Soil API
+          var data = {
+            lat: latitude,
+            lon: longitude,
+            apiToken: apiToken
+          };
+    
+          // Make a POST request to the NARC Soil API
+          fetch('/api/soil', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': 'Bearer ' + apiToken
+            },
+            body: JSON.stringify(data)
+          })
+          .then(response => response.json())
+          .then(responseData => {
+            // Redirect to the result page with the received soil data
+            window.location.href = 'result.html?soilData=' + encodeURIComponent(JSON.stringify(responseData));
+          })
+          .catch(error => console.error('Error:', error));
+        }
+
+      </script>
+
+</body>
+</html>
+

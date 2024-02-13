@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>Home Page</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-fixed-top navbar-dark  bg-dark">
+        <a class="navbar-brand" href="#">Kei tah aaudaina navigation bar</a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+          
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Market</a> 
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Register</a>
+                </li>
+            </ul>
+          </div>
+      </nav> 
+
+
+    <h1>Home Page</h1>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+  </body>
+    <style>
+      body{
+        background-color: white;
+        color: black;
+      }
+    </style>
+</html>
+
+<!--#0B796B-->
+
+<!--maps main
+
+from flask_googlemaps import GoogleMaps
+from flask_googlemaps import Map
+ 
+app.config['GOOGLEMAPS_KEY'] = "2f98043980ed408dbe376d994ece6ce3"
+
+# Initialize the extension
+GoogleMaps(app)
+
+@app.route("/map",methods=['GET','POST'])
+def mapview():
+
+
+    # creating a map in the view
+    mymap = Map(
+        identifier="view-side",
+        lat=37.4419,
+        lng=-122.1419,
+        markers=[(37.4419, -122.1419)]
+    )
+    sndmap = Map(
+        identifier="sndmap",
+        lat=37.4419,
+        lng=-122.1419,
+        markers=[
+          {
+             'icon': 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+             'lat': 37.4419,
+             'lng': -122.1419,
+             'infobox': "<b>Hello World</b>"
+          },
+          {
+             'icon': 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+             'lat': 37.4300,
+             'lng': -122.1400,
+             'infobox': "<b>Hello World from other place</b>"
+          }
+        ]
+    )
+    return render_template('map.html', mymap=mymap, sndmap=sndmap)
+    -->
+
+   
+  <!--maps template
+   <!DOCTYPE html>
+  <html>
+  <head>
+    {{"decoupled-map"|googlemap_js(37.4419, -122.1419, markers=[(37.4419,
+    -122.1419)])}} {{mymap.js}} {{sndmap.js}}
+  </head>
+  <body>
+    <h1>Flask Google Maps Example</h1>
+
+    <h2>Template function centered, no marker</h2>
+    {{googlemap("simple-map", 37.4419, -122.1419)}}
+
+    <h2>Template filter decoupled with single marker</h2>
+    {{"decoupled-map"|googlemap_html(37.4419, -122.1419)}}
+
+    <h2>Template function with multiple markers</h2>
+    {% with map=googlemap_obj("another-map", 37.4419, -122.1419,
+    markers=[(37.4419, -122.1419), (37.4300, -122.1400)]) %} {{map.html}}
+    {{map.js}} {% endwith %}
+
+    <h2>First map generated in view</h2>
+    {{mymap.html}}
+
+    <h2>Second map generated in view</h2>
+    <h3>Example for different icons in multiple markers with infoboxes</h3>
+    {{sndmap.html}}
+  </body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dashboard page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+    .button a{
+        text-decoration: none;
+        background: #094E2D;
+        color: white;
+        padding: 10px 18px;
+        font-size: 20px;
+        border: #0B796B;
+        border-radius: 8px;
+        letter-spacing: 1px;
+        transition: 0.4s;
+    }
+    .button a:hover {
+        background: transparent;
+        border: 1px solid #094E2D;
+        color: black;
+      }
+</style>
+</head>
+
+<body>
+
+  <hr style="width:100%; height:2px; text-align: ; background-color:none">
+
+  <div class="row justify-content-center">
+    <div class="logo">
+      <div class="image">
+        <a href="{{url_for('use_page')}}"><img src="/static/img/digihand.jpg" alt="teehee"style="width:60px; height:65px; border-radius:50%; "></a>KHETI
+      </div>
+    </div>
+  </div>
+  
+  <hr style="width:70%; height:0px; text-align: ; background-color:#094E2D">
+
+<div class="container">
+    <div class=" row justify-content-center">
+        <div class="col-sm-8">
+            <h2>User Dashboard</h2>
+
+            <img src="/static/img/profile.jpg" alt="teehee"style="width:60px; height:65px; border-radius:50%; ">
+            <p><b>Name: </b> {{user.name }}</p>
+            <p><b>Email: </b> {{user.email }}</p>
+
+            <div class= "button">
+                <a href= "{{url_for('logout_page')}}">Log Out</a>
+            </div>
+            <!-- <p><b>Password: </b>{{user.password}}</p>
+            we can see hashed password is this line of code is executed
+            -->        
+        </div>
+    </div>
+  
+</div>
+
+
+</body>
+</html>
+
+<!--<div class="form-group form-check">
+  <label class="form-check-label">
+    <input class="form-check-input" type="checkbox" name="remember"> Remember me
+  </label>
+</div>-->
+
+ <!--
+                   <table>
+                     <tr>
+                       <th>
+                         <div class="submit">
+                           <a href="{{ url_for('dashboard_page') }}">Submit</a>
+                         </div>
+                       </th>
+ 
+                       <th>
+                         <div class="button">
+                           <a href="{{ url_for('login_page') }}">Login</a>
+                         </div>
+                       </th>
+ 
+                     </tr>
+                     </table>
+                    -->
+            
+
+                     <!--
+                <table>
+                  <tr>
+                    <th>
+                      <div class="submit">
+                        <a href="{{ url_for('dashboard_page') }}">Submit</a>
+                      </div>
+                    </th>
+  
+                    <th>
+                      <div class="button">
+                        <a href="{{ url_for('register_page') }}">Register</a>
+                      </div>
+                    </th>
+  
+                  </tr>
+                  </table>
+                
+              
+                -->
+
+
+def find_popup_slice(html):
+'''
+Find the starting and edning index of popup function
+'''
+
+pattern = "function latLngPop(e)"
+
+# startinf index
+starting_index = html.find(pattern)
+
+#
+tmp_html = html[starting_index:]
+
+#
+found = 0
+index = 0
+opening_found = False
+while not opening_found or found > 0:
+    if tmp_html[index] == "{":
+        found += 1
+        opening_found = True
+    elif tmp_html[index] == "}":
+        found -= 1
+
+    index += 1
+
+# determine the edning index of popup function
+ending_index = starting_index + index
+
+return starting_index, ending_index
+
+def find_variable_name(html, name_start):
+variable_pattern = "var "
+pattern = variable_pattern + name_start
+
+starting_index = html.find(pattern) + len(variable_pattern)
+tmp_html = html[starting_index:]
+ending_index = tmp_html.find(" =") + starting_index
+
+return html[starting_index:ending_index]
+
+def custom_code(popup_variable_name, map_variable_name):
+return '''
+        // custom code
+        function latLngPop(e) {
+            //%s
+            //    .setLatLng(e.latlng)
+            //    .setContent("Latitude: " + e.latlng.lat.toFixed(4) +
+            //                "<br>Longitude: " + e.latlng.lng.toFixed(4))
+            //    .openOn(%s);
+
+            //console.log("Latitude: " + e.latlng.lat.toFixed(4));
+            //console.log("Longitude: " + e.latlng.lng.toFixed(4));
+
+            L.marker(
+                [e.latlng.lat, e.latlng.lng],
+                {}
+            ).addTo(%s);
+        }
+        // end custom code
+''' % (popup_variable_name, map_variable_name, map_variable_name)
+
+if __name__ == "__main__":
+# create variables
+map_filepath = "fol.html"
+center_coord = [51.083180198360026, 9.307220072053097]
+
+# create folium map
+vmap = folium.Map(center_coord, zoom_start=9)
+
+# add popup
+folium.LatLngPopup().add_to(vmap)
+
+# store the map to a file
+vmap.save(map_filepath)
+
+# read ing the folium file
+html = None
+with open(map_filepath, 'r') as mapfile:
+    html = mapfile.read()
+
+# find variable names
+map_variable_name = find_variable_name(html, "map_")
+popup_variable_name = find_variable_name(html, "lat_lng_popup_")
+
+# determine popup function indicies
+pstart, pend = find_popup_slice(html)
+
+# inject code
+with open(map_filepath, 'w') as mapfile:
+    mapfile.write(
+        html[:pstart] + \
+        custom_code(popup_variable_name, map_variable_name) + \
+        html[pend:]
+    )
+
+
+
+
+    @app.route('/register',methods=['GET','POST'])
+def register():
+    if request.method == 'POST':
+        # handle request
+        name = request.form['name']
+        email = request.form['email']
+        password = request.form['password']
+
+        new_user = User(name=name,email=email,password=password)
+        db.session.add(new_user)
+        try:
+            db.session.commit()
+            return "User added successfully"
+        except Exception as e: 
+            db.session.rollback()
+            return f"Commit failed. Error: {e}"
+        
+        else:
+            return 'invalid data '
+        #return redirect('/dashboard')
+
+    #return render_template('register.html')
+
+<!--for folium map-->
+    @app.route("/fol")
+def fol_page():
+    """Create a map object"""
+    mapObj = folium.Map(location=[27.9928478,84.5296624], zoom_start=7.5, tiles=None, width=1430, height=575, margin = 0 )
+    
+    folium.TileLayer('openstreetmap', attr='openstreetmap').add_to(mapObj)
+    folium.TileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', attr='Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community').add_to(mapObj)
+    folium.TileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', attr='Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC').add_to(mapObj)
+    
+    folium.LayerControl().add_to(mapObj)
+    
+    mapObj.save('fol.html')
+    
+    # add a marker to the map object
+    folium.Marker([27.9928478,84.5296624],
+                  popup="<i>Kathmandu</i>").add_to(mapObj)
+
+    # render the map object
+    mapObj.get_root().render()
+
+    # derive the script and style tags to be rendered in HTML head
+    header = mapObj.get_root().header.render()
+
+    # derive the div container to be rendered in the HTML body
+    body_html = mapObj.get_root().html.render()
+
+    # derive the JavaScript to be rendered in the HTML body
+    script = mapObj.get_root().script.render()
+    
+
+    # return a web page with folium map components embeded in it.
+    return render_template_string(
+"""  
+   <!DOCTYPE html>
+            <html>
+                <head>
+                    {{ header|safe }}
+                </head>
+                <body>
+                <hr style="width:100%; height:2px;  ; background-color:black">
+
+                    <h1  style="font-size:60px; text-align:center; color:#094E2D; "><img src="/static/img/digihand.jpg" alt="teehee"style="width:55px;height:60px; border-radius:50%;">MAP OF NEPAL TO SELECT REGION OF CHOICE</h1>
+                
+                <hr style="width:100%; height:2px;  ; background-color:black">
+
+                    {{ body_html|safe }}
+               
+                <hr style="width:100%; height:2px;  ; background-color:black">
+                
+                    <h3 style="font-size:30px; text-align:center; color:#094E2D; ">Please Select location on map</h3>
+                    
+                    <script>
+                        {{ script|safe }}
+                    </script>
+                    
+                <div class="container">
+                     <div class="row justify-content-center">
+                        <div class="col-sm-8">
+
+                            <form action="/fol_page" method="POST">
+          
+                            <div class="form-group">
+                            <label for="lat">Latitude:</label>
+                             <input type="lat" class="form-control" id="email" placeholder="Your Latitude" name="email">
+                            </div>
+          
+                            <div class="form-group">
+                            <label for="lng">Password:</label>
+                            <input type="lng" class="form-control" id="lng" placeholder="Your Longitude" name="password">
+                            </div>
+
+            
+                        <table>
+                        <tr>
+                        <th>
+                         <div class="submit">
+                             <a href="{{ url_for('prediction') }}">Submit</a>
+                        </div>
+                        </th>
+
+                        <th>
+                         <div class="button">
+                             <a href="{{ url_for('fol_page') }}">Cancel</a>
+                        </div>
+                        </th>
+
+                         </tr>
+                        </table>
+
+                          </form>
+                    </div>
+                </div>
+                 
+                </body>
+            </html>
+""", header=header, 
+     body_html=body_html, 
+     script=script
+     )
+
+     function onMapClick(e){
+      var coord = e.latlng;
+      var lat = coord.lat;
+      var lng = coord.lng;
+  }
+  
+  document.getElementById('result').innerHTML = lat;
+  document.getElementById('results').innerHTML = lng;
+  
+  map.on('click', onMapClick);
+  <div class="submit">
+      <a href="{{ url_for('form')}}">Submit</a>
+  </div>
+
+------------
+  <div class="container">
+    <div class=" row justify-content-center">
+        <div class="col-sm-8">
+            <h2>User Dashboard</h2>
+          <div class="logo">
+             <img src="/static/img/profile.png" alt="teehee"style="width:60px; height:65px; border-radius:50%;">
+          </div>
+            <br>           
+            <p><b>Name:</b>{{user.name}}</p>
+            <p><b>Email:</b>{{user.email}}</p> 
+          <br>
+            <div class= "button">
+                <a href= "{{url_for('logout_page')}}">Log Out</a>
+            </div>
+                
+        </div>
+    </div>
+  
+</div>
+
+---
+class Users(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    email = db.Column(db.String(100), unique=True)
+    password = db.Column(db.String(100))
+
+    def __init__(self,email,password,name):
+        self.name = name
+        self.email = email
+        #self.password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
+        hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+
+        if isinstance(hashed_password, bytes):
+             self.password = hashed_password.decode('utf-8')
+        else:
+        # Handle the case where bcrypt.hashpw returns False (an error occurred)
+            raise ValueError("Error hashing password")
+        def check_password(self,password):
+            return bcrypt.checkpw(password.encode('utf-8'),self.password.encode('utf-8'))
+
+with app.app_context():
+    db.create_all()
+
+

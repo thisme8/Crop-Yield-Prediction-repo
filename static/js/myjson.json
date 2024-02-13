@@ -1,0 +1,377 @@
+[
+    {
+      "DISTRICT": "Achham",
+      "lat": 29.0396,
+      "lon": 81.2519
+    },
+    {
+      "DISTRICT": "Arghakhanchi",
+      "lat": 27.894,
+      "lon": 83.122
+    },
+    {
+      "DISTRICT": "Baglung",
+      "lat": 28.3641,
+      "lon": 83.2078
+    },
+    {
+      "DISTRICT": "Baitadi",
+      "lat": 29.5013,
+      "lon": 80.5883
+    },
+    {
+      "DISTRICT": "Bajang",
+      "lat": 29.7767,
+      "lon": 81.2519
+    },
+    {
+      "DISTRICT": "Bajura",
+      "lat": 29.4201,
+      "lon": 81.4279
+    },
+    {
+      "DISTRICT": "Banke",
+      "lat": 28.1022,
+      "lon": 81.8224
+    },
+    {
+      "DISTRICT": "Bara",
+      "lat": 27.1341,
+      "lon": 85.0649
+    },
+    {
+      "DISTRICT": "Bardiya",
+      "lat": 28.3102,
+      "lon": 81.4279
+    },
+    {
+      "DISTRICT": "Bhaktapur",
+      "lat": 27.6866,
+      "lon": 85.4582
+    },
+    {
+      "DISTRICT": "Bhojpur",
+      "lat": 27.1042,
+      "lon": 87.0402
+    },
+    {
+      "DISTRICT": "Chitawan",
+      "lat": 27.5291,
+      "lon": 84.3542
+    },
+    {
+      "DISTRICT": "Dadeldhura",
+      "lat": 29.2188,
+      "lon": 80.4994
+    },
+    {
+      "DISTRICT": "Dailekh",
+      "lat": 28.9262,
+      "lon": 81.6473
+    },
+    {
+      "DISTRICT": "Dang",
+      "lat": 28,
+      "lon": 82.4753
+    },
+    {
+      "DISTRICT": "Darchula",
+      "lat": 29.9363,
+      "lon": 80.8987
+    },
+    {
+      "DISTRICT": "Dhading",
+      "lat": 27.9711,
+      "lon": 84.8985
+    },
+    {
+      "DISTRICT": "Dhankuta",
+      "lat": 27.0105,
+      "lon": 87.2151
+    },
+    {
+      "DISTRICT": "Dhanusa",
+      "lat": 26.835,
+      "lon": 86.0122
+    },
+    {
+      "DISTRICT": "Dolkha",
+      "lat": 27.7784,
+      "lon": 86.1752
+    },
+    {
+      "DISTRICT": "Dolpa",
+      "lat": 29.0539,
+      "lon": 83.0791
+    },
+    {
+      "DISTRICT": "Doti",
+      "lat": 29.2006,
+      "lon": 80.8987
+    },
+    {
+      "DISTRICT": "Gorkha",
+      "lat": 28.2964,
+      "lon": 84.8568
+    },
+    {
+      "DISTRICT": "Gulmi",
+      "lat": 28.0889,
+      "lon": 83.2934
+    },
+    {
+      "DISTRICT": "Humla",
+      "lat": 30.0052,
+      "lon": 81.9535
+    },
+    {
+      "DISTRICT": "Ilam",
+      "lat": 26.9225,
+      "lon": 87.8942
+    },
+    {
+      "DISTRICT": "Jajarko",
+      "lat": 28.8651,
+      "lon": 82.1714
+    },
+    {
+      "DISTRICT": "Jhapa",
+      "lat": 26.5455,
+      "lon": 87.8942
+    },
+    {
+      "DISTRICT": "Jumla",
+      "lat": 29.2889,
+      "lon": 82.3018
+    },
+    {
+      "DISTRICT": "Kabhre",
+      "lat": 27.5285,
+      "lon": 85.6435
+    },
+    {
+      "DISTRICT": "Kailali",
+      "lat": 28.8314,
+      "lon": 80.8987
+    },
+    {
+      "DISTRICT": "Kalikot",
+      "lat": 29.2089,
+      "lon": 81.7349
+    },
+    {
+      "DISTRICT": "Kanchanpur",
+      "lat": 28.8372,
+      "lon": 80.3213
+    },
+    {
+      "DISTRICT": "Kapilbastu",
+      "lat": 27.5528,
+      "lon": 83.0496
+    },
+    {
+      "DISTRICT": "Kaski",
+      "lat": 28.2622,
+      "lon": 84.0167
+    },
+    {
+      "DISTRICT": "Kathmandu",
+      "lat": 27.7293,
+      "lon": 85.3343
+    },
+    {
+      "DISTRICT": "Khotang",
+      "lat": 27.1838,
+      "lon": 86.7819
+    },
+    {
+      "DISTRICT": "Lalitpur",
+      "lat": 27.5178,
+      "lon": 85.3136
+    },
+    {
+      "DISTRICT": "Lamjung",
+      "lat": 28.2765,
+      "lon": 84.3542
+    },
+    {
+      "DISTRICT": "Mahottari",
+      "lat": 26.8762,
+      "lon": 85.8077
+    },
+    {
+      "DISTRICT": "Makwanpur",
+      "lat": 27.5546,
+      "lon": 85.0233
+    },
+    {
+      "DISTRICT": "Manang",
+      "lat": 28.6667,
+      "lon": 84.0167
+    },
+    {
+      "DISTRICT": "Morang",
+      "lat": 26.6799,
+      "lon": 87.4604
+    },
+    {
+      "DISTRICT": "Mugu",
+      "lat": 29.6144,
+      "lon": 82.3452
+    },
+    {
+      "DISTRICT": "Mustang",
+      "lat": 28.9985,
+      "lon": 83.8473
+    },
+    {
+      "DISTRICT": "Myagdi",
+      "lat": 28.6029,
+      "lon": 83.3362
+    },
+    {
+      "DISTRICT": "Nawalparasi",
+      "lat": 27.6572,
+      "lon": 84.059
+    },
+    {
+      "DISTRICT": "Nuwakot",
+      "lat": 27.8895,
+      "lon": 85.2308
+    },
+    {
+      "DISTRICT": "Okhaldhunga",
+      "lat": 27.3619,
+      "lon": 86.3782
+    },
+    {
+      "DISTRICT": "Palpa",
+      "lat": 27.8253,
+      "lon": 83.6348
+    },
+    {
+      "DISTRICT": "Panchther",
+      "lat": 27.1096,
+      "lon": 87.8157
+    },
+    {
+      "DISTRICT": "Parbat",
+      "lat": 28.2246,
+      "lon": 83.6987
+    },
+    {
+      "DISTRICT": "Parsa",
+      "lat": 27.219,
+      "lon": 84.8151
+    },
+    {
+      "DISTRICT": "Pyuthan",
+      "lat": 28.1032,
+      "lon": 82.8548
+    },
+    {
+      "DISTRICT": "Ramechhap",
+      "lat": 27.4469,
+      "lon": 86.053
+    },
+    {
+      "DISTRICT": "Rasuwa",
+      "lat": 28.1755,
+      "lon": 85.3963
+    },
+    {
+      "DISTRICT": "Rolpa",
+      "lat": 28.3816,
+      "lon": 82.6483
+    },
+    {
+      "DISTRICT": "Routahat",
+      "lat": 26.9547,
+      "lon": 85.3136
+    },
+    {
+      "DISTRICT": "Rukum",
+      "lat": 28.6947,
+      "lon": 82.4319
+    },
+    {
+      "DISTRICT": "Rupandehi",
+      "lat": 27.533,
+      "lon": 83.3789
+    },
+    {
+      "DISTRICT": "Salyan",
+      "lat": 28.4014,
+      "lon": 82.1714
+    },
+    {
+      "DISTRICT": "Sankhuwasabha",
+      "lat": 27.6174,
+      "lon": 87.3016
+    },
+    {
+      "DISTRICT": "Saptari",
+      "lat": 26.6191,
+      "lon": 86.7819
+    },
+    {
+      "DISTRICT": "Sarlahi",
+      "lat": 26.9627,
+      "lon": 85.5612
+    },
+    {
+      "DISTRICT": "Sindhuli",
+      "lat": 27.2569,
+      "lon": 85.9713
+    },
+    {
+      "DISTRICT": "Sindhupalchok",
+      "lat": 27.9512,
+      "lon": 85.6846
+    },
+    {
+      "DISTRICT": "Siraha",
+      "lat": 26.7036,
+      "lon": 86.3782
+    },
+    {
+      "DISTRICT": "Solukhumbu",
+      "lat": 27.6992,
+      "lon": 86.7416
+    },
+    {
+      "DISTRICT": "Sunsari",
+      "lat": 26.6276,
+      "lon": 87.1822
+    },
+    {
+      "DISTRICT": "Surkhet",
+      "lat": 28.5175,
+      "lon": 81.7787
+    },
+    {
+      "DISTRICT": "Syangja",
+      "lat": 28.0197,
+      "lon": 83.8049
+    },
+    {
+      "DISTRICT": "Tanahun",
+      "lat": 27.9447,
+      "lon": 84.2279
+    },
+    {
+      "DISTRICT": "Taplejung",
+      "lat": 27.6257,
+      "lon": 87.7763
+    },
+    {
+      "DISTRICT": "Terhathum",
+      "lat": 27.1998,
+      "lon": 87.5791
+    },
+    {
+      "DISTRICT": "Udayapur",
+      "lat": 26.8518,
+      "lon": 86.6611
+    }
+  ]

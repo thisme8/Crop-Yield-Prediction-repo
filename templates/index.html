@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+<head lang="en">
+       <!-- Required meta tags -->
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+       <!-- Bootstrap CSS -->
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<style type="text/css">
+    *{padding:0; margin:0; box-sizing: border-box;}
+    
+    body{
+        font-family: 'Oswald', sans-serif;
+        background : url(/static/img/dhan.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        section{
+          width: 90%;
+          max-width: 1200px;
+          margin: 0 auto;
+          .row{
+            align-items: center;
+            height: 100;
+          }
+        }
+      }
+
+    header{
+        width: 100%;
+        height: 13vh;
+        background-color: #71B295;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: sans-serif;
+    }
+
+ 
+    nav{
+        width: 100%;
+        height: 100px;
+
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+
+    .logo{
+        font-size: 3em;
+        letter-spacing: 2px; 
+        color: #094E2D;
+        font-weight: bold;
+    }
+
+    .image{
+        border-radius: 50%;
+        opacity: 0.5;
+    }
+
+    .menu a{
+        text-decoration: none;
+        color: black;
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+
+    .menu a:before{
+       content: '';
+       position: absolute;
+       border-bottom: #094E2D;
+       top:0;
+       left:0;
+       width:0%;
+       height: 100%;
+       transition: 0.4s;
+    }
+
+    .menu a:hover:before{
+        width: 90%;
+         }
+
+    .register a{
+        text-decoration: none;
+        background: #094E2D;
+        color: white;
+        padding: 10px 18px;
+        font-size: 20px;
+        border: #0B796B;
+        border-radius: 8px;
+        letter-spacing: 1px;
+        transition: 0.4s;
+    }
+
+    .register a:hover{
+        background: transparent;
+        border: 1px solid #094E2D;
+        color: black;
+    }
+
+
+    .h-txt{
+        max-width: 650px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: black;
+    }
+
+    .h-txt span{
+        letter-spacing: 5px;
+    }
+
+    .h-txt h1{
+        font-size: 3.5em;
+    }
+
+    .h-txt a{
+        text-decoration: none;
+        background: #094E2D;
+        color: white;
+        padding: 10px 20px;
+        letter-spacing: 5px;
+        transition: 0.4s;
+    }
+
+    .h-txt a:hover{
+        background: transparent;
+        border: 1px solid #094E2D;
+        
+    }
+
+    img {
+        border-radius: 50%;
+        opacity : 1 ;
+      }
+
+      .landing-page {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url('your-background-image.jpg'); /* Set your background image here */
+        background-size: cover;
+        color: white;
+      }
+      
+      
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Translucent black overlay */
+        display: none;
+      }
+      
+      .cards-container {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+      .card {
+        width: 250px;
+        height: 300px;
+        background-color: rgba(255, 255, 255, 0.8); /* Translucent white background */
+        margin: 10px;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        border-width: 4px;
+        border-color: #094E2D;
+      }
+      
+
+   
+</style>
+</head>
+
+<body>
+    <header>
+        <nav>
+
+              <div class="logo">
+                    <img src="/static/img/digihand.jpg", alt="teehee"style="width:55px;height:60px; align:right ;">KHETI
+              </div>
+
+
+                <div class="register">
+                  <a href="{{ url_for('forms') }}">Get Analysis</a>
+                  <a href="{{ url_for('aboutus') }}">About Us</a>
+              </div>
+
+            
+              <div class="register">
+                <a href="{{ url_for('login') }}">Log in</a>
+                <a href="{{ url_for('register') }}">Register</a>
+              </div>
+
+          </nav> 
+
+        <selction class="h-txt">
+            <div class="register">
+                <h2 style="font-weight:bold">HARVESTING TOMORROW...</h2>
+              </div>
+            <h3 style="font-weight:bold">Tailored Solutions for Sustainable Agriculture</h3>
+        </selction>
+
+        <div class="landing-page">
+            <div class="btn btn-success" id="getStartedButton">
+              <button class="get-started">Get Started With Us</button>
+            </div>
+            <div class="overlay" id="overlay"></div>
+            <div class="cards-container" id="cardsContainer">
+                <div class="card">
+                    <image>
+                    <img src="/static/img/land3.avif" alt="Card 3 Image">
+                    </image>
+                    <div class="card-content">
+                      <h3 style="font-weight:bold; font-color:#094E2D;"> <a href="/forms">Get Analysis</a></h2>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <image>
+                    <img src="/static/img/land2.avif" alt="Card 2 Image">
+                    </image>
+                    <div class="card-content">
+                      <h2 style="font-weight:bold; font-color:#094E2D;"><a href="/register">JOIN US</a></h2>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <image>
+                        <img src="/static/img/land1.avif" alt="Card 1 Image">
+                    </image>
+                    <div class="card-content">
+                      <h4 style="font-weight:bold; font-color:#094E2D;"> <a href="/aboutus">Know More About Us</a></h2>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const getStartedButton = document.getElementById('getStartedButton');
+            const overlay = document.getElementById('overlay');
+            const cardsContainer = document.getElementById('cardsContainer');
+          
+            getStartedButton.addEventListener('click', function (event) {
+              event.stopPropagation(); // Prevents the click event from reaching the document
+          
+              overlay.style.display = 'block';
+              cardsContainer.style.display = 'flex';
+            });
+          
+            document.addEventListener('click', function () {
+              overlay.style.display = 'none';
+              cardsContainer.style.display = 'none';
+            });
+          });
+    </script>
+    </header>
+
+    <!--<form action="/map" method="post">
+        <label for="location">Enter Location:</label>
+        <input type="text" id="location" name="location" required>
+        <button type="submit">Show Map</button>
+    </form>-->
+
+   
+</body>
+

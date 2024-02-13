@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html >
+<head lang="en">
+ <title>About page</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style type="text/css">
+
+.align{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;   
+}
+.logo{
+        font-size: 3em;
+        letter-spacing: 2px; 
+        color: #094E2D;
+        font-weight: bold;
+    }
+ 
+
+.image {
+      border-radius: 50%;
+      opacity : 1;
+    }
+
+body{
+	font-family: 'Oswald', sans-serif;
+	background : url(/static/img/theme2.jpeg);
+	section{
+		width: 90%;
+		max-width: 1200px;
+		margin: 0 auto;
+		.row{
+			align-items: center;
+    	height: 100vh;
+		}
+	}
+}
+
+.custom-container {
+    background-color: #D8FFEE; /* Add a background color to the container */
+    padding: 15px; /* Add padding to the container */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    height:940px;
+	border: 1px solid black;
+	margin: 20px 0 5px 0 ;
+   
+}
+
+.card{
+	position: relative;
+	height: 300px;
+	width: 500px;
+	margin: 25px 0 0 5px;
+    align: center
+	transition: ease all $transition-time;
+	perspective: 1200px;
+	&:hover{
+		.cover{
+			transform: rotateX(0deg) rotateY(-180deg);
+			&:before{
+				transform: translateZ(30px);
+			}
+			&:after{
+				background-color: black;
+			}
+			h1{
+				transform: translateZ(100px);
+			}
+			.price{
+				transform: translateZ(60px);
+			}
+			a{
+				transform: translateZ(-60px) rotatey(-180deg);
+			}
+		}
+	}
+
+    
+	
+	.cover{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		transform-style: preserve-3d;
+  	transition: ease all $transition-time;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		&:before{
+			content: '';
+			position: absolute;
+			border: 5px solid rgba(255,255,255,.5);
+			box-shadow: 0 0 12px rgba(0,0,0,.3); 
+			top:20px;
+			left:20px;
+			right:20px;
+			bottom:20px;
+			z-index: 2;
+			transition: ease all $transition-time;
+			transform-style: preserve-3d;
+			transform: translateZ(0px);
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			top:0px;
+			left:0px;
+			right:0px;
+			bottom:0px;
+			z-index: 2;
+			transition: ease all 1.3s;
+			background: rgba(0,0,0,.4);
+		}
+		&.item-a{
+			background-image: url('/static/img/crop1.avif');
+		}
+		&.item-b{
+			background-image: url('/static/img/crop2.avif');
+		}
+		&.item-c{
+			background-image: url('/static/img/crop3.avif');
+		}
+		h1{
+			font-weight: 600;
+			position: absolute;
+			bottom: 55px;
+			left: 50px;
+			color: white;
+			transform-style: preserve-3d;
+  		transition: ease all $transition-time;
+			z-index:3;
+			font-size: 3em;
+			transform: translateZ(0px);
+		}
+		.top{
+			font-weight: 200;
+			position: absolute;
+			top: 55px;
+			right: 50px;
+			color: white;
+			transform-style: preserve-3d;
+  		transition: ease all $transition-time;
+			z-index:4;
+			font-size: 2em;
+			transform: translateZ(0px);
+		}
+	}
+	.card-back{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background: #0b0f08;
+		transform-style: preserve-3d;
+  	transition: ease all $transition-time;
+		transform: translateZ(-1px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		a{
+			transform-style: preserve-3d;
+			transition: ease transform $transition-time, ease background .5s;
+			transform: translateZ(-1px) rotatey(-180deg);
+			background: transparent;
+			border: 1px solid white;
+			font-weight: 200;
+			font-size: 1.2em;
+			color: white;
+			padding: 14px 32px;
+			outline: none;
+			text-decoration: none;
+			&:hover{
+				background-color: white;
+				color: #0b0f08;
+			}
+		}
+	}
+}
+</style>
+
+</head>
+
+
+<body>
+  
+  <hr style="width:100%; height:2px;  background-color:none">
+
+    <div class='align'>
+      <div class="row justify-content-center">
+        <div class="logo">
+          <div class="image">
+            <a href="{{url_for('index_page')}}"><img src="/static/img/digihand.jpg" alt="teehee"style="width:60px; height:65px; border-radius:50%; "></a>KHETI
+          </div>
+        </div>
+      </div>
+    </div>
+  
+<hr style="width:70%; height:0px; text-align: ; background-color:#094E2D">
+
+<br>
+  <br>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+    <section>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="card ">
+                    <div class="cover item-a">
+                        <h1>Meet The<br>Creators</h1>
+                        <div class="card-back">
+							<a>This is a project created by three students of 
+								Himalaya College Of Engineering for the partial 
+								completion of thier course in Computer Engineering.<br>
+							    And they are:<br>
+						    Prakriti Shrestha(HCOE77BCT029)<br>
+					        Ranjita Kharel(HCOE77BCT031)<br>
+				            Stuti Upreti(HCOE77BCT043)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="card ">
+                    <div class="cover item-b">
+                        <h1>Our<br>Resources</h1>
+                        <div class="card-back">
+                            <a href="https://soil.narc.gov.np">Soil Data Contibutors</a>
+							<a href="https://rds.icimod.org/Home/DataDetail?metadataId=17200">Crop Data Contibutors</a>
+                            <a href="https://opendatanepal.com/dataset/district-wise-daily-climate-data-for-nepal/resource/39cd1c13-2051-4d4c-9ea3-ba8106833166" style="font-size:1em;">Weather Data Contibutors</a>
+						</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="card ">
+                    <div class="cover item-c">
+                        <h1>Contact<br>Us</h1>
+                        <div class="card-back">
+                            <a>Email:<br>support@kheti.com</a>
+							<a>Contact.no : 9841000000 </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>   
+</div>
+
+    <div class="col-md-4 custom-container">
+        <h3 style="font-size:50px; text-align:center; color:#094E2D; font-weight:bold ">OUR PURPOSE</h3>
+		<br>
+		<hr style="width:85%; height:2px;  background-color:black">
+		<hr style="width:75%; height:2px;  background-color:black">
+		<br>
+        <p style="font-size:25px; text-align:center;">The purpose of this agricultural technology initiative is to empower farmers with
+			 data-driven insights and recommendations to enhance crop yield and optimize 
+			 agricultural practices.Our project aims to provide farmers with personalized and 
+			 precise recommendations for selecting suitable crops based on their geographical 
+			 location.By harnessing the power of data analytics and emerging technologies, this 
+			 project seeks to revolutionize traditional farming practices, promoting sustainable
+			 agriculture, increasing crop yield, and ultimately improving the livelihoods of farmers.
+
+			</p>
+    </div>   
+
+</div>
+</div>
+
+</body>
